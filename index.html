@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Yamaha Motorcycles - Innovation & Performance</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- ✅ Custom Styles - Keep this after Tailwind -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav class="bg-gray-900 bg-opacity-80 backdrop-blur-sm p-4 shadow-lg sticky top-0 z-50 rounded-b-lg">
+    <div class="container mx-auto flex justify-between items-center px-4">
+      <a href="#" class="text-3xl font-bold text-blue-500 hover:text-blue-400 transition duration-300 rounded-md p-2">Yamaha World</a>
+      <div class="flex space-x-6">
+        <a href="#home" class="nav-link text-lg font-medium text-gray-300 hover:text-blue-400 transition duration-300 pb-1 rounded-md" onclick="showPage('home')">Home</a>
+        <a href="#motorcycles" class="nav-link text-lg font-medium text-gray-300 hover:text-blue-400 transition duration-300 pb-1 rounded-md" onclick="showPage('motorcycles')">Our Motorcycles</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main content -->
+  <main class="flex-grow container mx-auto p-8 py-12 flex flex-col items-center justify-center">
+    <!-- Sections like Home and Motorcycles go here -->
+             <!-- Home Page Section -->
+        <section id="home-page" class="page-section bg-gray-800 bg-opacity-70 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-2xl max-w-4xl w-full text-center transition-all duration-500 ease-in-out transform scale-100 opacity-100">
+            <h1 class="text-5xl md:text-6xl font-extrabold text-blue-400 mb-6 drop-shadow-lg">
+                Yamaha
+            </h1>
+            <p class="text-xl md:text-2xl text-gray-200 mb-10 leading-relaxed">
+                Innovation, performance, and passion – the Yamaha legacy.
+            </p>
+
+            <div class="text-left bg-gray-700 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
+                <h2 class="text-3xl font-semibold text-blue-300 mb-4">Yamaha's Enduring Story</h2>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Yamaha, founded in 1887, began with musical instruments before establishing Yamaha Motor Co., Ltd. in 1955. Their first motorcycle, the YA-1, quickly built a reputation for performance and innovation. Driven by the "Kando" philosophy – creating products of exceptional value and excitement – Yamaha continues to be a global leader, synonymous with quality, speed, and adventure in the motorcycle world.
+                </p>
+                <!-- Image for YA-1 -->
+                <img src="https://global.yamaha-motor.com/showroom/cp/collection/ya-1/img/1955_YA-1.jpg" alt="Yamaha YA-1 (1955)" class="ya1-image">
+                <p class="text-gray-400 text-sm mt-4 text-center">The iconic Yamaha YA-1, their first motorcycle.</p>
+            </div>
+        </section>
+
+        <!-- Motorcycles Page Section -->
+        <section id="motorcycles-page" class="page-section hidden bg-gray-800 bg-opacity-70 backdrop-blur-md p-8 md:p-12 rounded-2xl shadow-2xl max-w-5xl w-full text-center transition-all duration-500 ease-in-out transform scale-95 opacity-0">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-blue-400 mb-8 drop-shadow-lg">
+                Our Yamaha Lineup
+            </h1>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Motorcycle 1: Yamaha YZF-R1 -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="showMotorcycleDetails('yzf-r1')">
+                    <!-- Image for YZF-R1 -->
+                    <img src="https://www.bikesrepublic.com/wp-content/uploads/2024/09/2025-Yamaha-YZF-R1M.jpg" alt="Yamaha YZF-R1" class="motorcycle-image">
+                    <div class="p-5 text-left">
+                        <h3 class="text-2xl font-semibold text-blue-300 mb-2">Yamaha YZF-R1</h3>
+                        <p class="text-gray-300 text-base mb-3">Model: YZF-R1</p>
+                        <p class="text-2xl font-bold text-blue-400">Price: RM 99,999</p>
+                    </div>
+                </div>
+
+                <!-- Motorcycle 2: Yamaha MT-09 -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="showMotorcycleDetails('mt-09')">
+                    <!-- Image for MT-09 -->
+                    <img src="https://4kwallpapers.com/images/wallpapers/yamaha-mt-09-2024-2048x2048-13355.jpg" alt="Yamaha MT-09" class="motorcycle-image">
+                    <div class="p-5 text-left">
+                        <h3 class="text-2xl font-semibold text-blue-300 mb-2">Yamaha MT-09</h3>
+                        <p class="text-gray-300 text-base mb-3">Model: MT-09</p>
+                        <p class="text-2xl font-bold text-blue-400">Price: RM 54,999</p>
+                    </div>
+                </div>
+
+                <!-- Motorcycle 3: Yamaha Ténéré 700 -->
+                <div class="bg-gray-700 rounded-xl shadow-lg overflow-hidden transition-all duration-300 transform hover:scale-105 cursor-pointer" onclick="showMotorcycleDetails('tenere-700')">
+                    <!-- Image for Ténéré 700 -->
+                    <img src="https://www.4moto-shop.de/images/product_images/info_images/Yamaha_Tenere_Dekor_dakar_design_4moto_bikewrap-5.jpg" alt="Yamaha Ténéré 700" class="motorcycle-image">
+                    <div class="p-5 text-left">
+                        <h3 class="text-2xl font-semibold text-blue-300 mb-2">Yamaha Ténéré 700</h3>
+                        <p class="text-gray-300 text-base mb-3">Model: Ténéré 700</p>
+                        <p class="text-2xl font-bold text-blue-400">Price: RM 62,999</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    <!-- You've already pasted those and they're fine! -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="bg-gray-900 bg-opacity-80 backdrop-blur-sm p-6 text-center text-gray-400 rounded-t-lg shadow-lg mt-auto">
+    <div class="container mx-auto">
+      <p>&copy; 2025 Yamaha World. All rights reserved.</p>
+      <p class="mt-2">Visit the official Yamaha website: 
+        <a href="https://global.yamaha-motor.com/" target="_blank" class="text-blue-400 hover:underline">global.yamaha-motor.com</a>
+      </p>
+    </div>
+  </footer>
+  <!-- Add this before </body> -->
+<div id="motorcycle-details-modal" class="modal-overlay fixed inset-0 flex items-center justify-center z-50 hidden transition-all duration-300">
+  <div id="modal-content-wrapper" class="bg-gray-800 rounded-2xl shadow-2xl p-8 max-w-lg w-full scale-95 opacity-0 transition-all duration-300">
+    <button onclick="hideMotorcycleDetails()" class="absolute top-4 right-6 text-gray-400 hover:text-blue-400 text-2xl font-bold">&times;</button>
+    <img id="modal-motorcycle-image" src="" alt="" class="w-full h-48 object-cover rounded-xl mb-6" />
+    <h2 id="modal-motorcycle-name" class="text-3xl font-bold text-blue-400 mb-2"></h2>
+    <p id="modal-motorcycle-model" class="text-lg text-gray-300 mb-4"></p>
+    <ul class="text-left text-gray-200 mb-4">
+      <li><strong>Engine:</strong> <span id="modal-engine"></span></li>
+      <li><strong>Max Power:</strong> <span id="modal-max-power"></span></li>
+      <li><strong>Top Speed:</strong> <span id="modal-top-speed"></span></li>
+      <li><strong>Features:</strong> <span id="modal-features"></span></li>
+    </ul>
+    <p id="modal-motorcycle-price" class="text-xl font-bold text-blue-300"></p>
+  </div>
+</div>
+
+  <!-- ✅ JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>
